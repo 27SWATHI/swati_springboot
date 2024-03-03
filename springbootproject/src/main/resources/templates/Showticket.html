@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tickets</title>
+</head>
+<body>
+	<h3>Ticket Tracker Application</h3>
+	<a href="ticketadd">New Ticket</a>
+	<h1>List of Tickets</h1>
+	<table border="3">
+		<tr>
+			<th>ID</th>
+			<th>TicketTitle</th>
+			<th>TicketDescription</th>
+			<th>Status</th>
+			<th>Action</th>
+		</tr>
+		<tr th:each="temp:${values}">
+			<td th:text="${temp.id}"></td>
+			<td th:text="${temp.ticketTitle}"></td>
+			<td th:text="${temp.ticketDescription}"></td>
+			<td th:text="${temp.status}"></td>
+			<td><a th:href="@{ticketupdate(id=${temp.id})}">Edit</a> <a
+				th:href="@{showticket(id=${temp.id})}">View</a> <a
+				th:href="@{view(id=${temp.id})}">View</a></td>
+
+		</tr>
+</body>
+</body>
+</html>
+

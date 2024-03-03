@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Update Ticket</title>
+<style>
+  body {
+    background-color: lightblue; 
+  }
+</style>
+</head>
+<body>
+	form action="ticketupdated" method="post">
+	<table border="3">
+		<tr>
+
+			<th>Id</th>
+
+			<td><input type="number" name="id" th:value="${tickets.id}"
+				readonly></td>
+		</tr>
+		<tr>
+			<th>TicketTitle</th>
+			<td><input type="text" name="ticketTitle"
+				th:value="${tickets.ticketTitle}"></td>
+		</tr>
+		<tr>
+			<th>TicketDescription</th>
+			<td><input type="text" name="ticketDescription"
+				th:value="${tickets.ticketDescription}"></td>
+
+		</tr>
+		<tr>
+
+			<th>status</th>
+
+			<td><input type="text" name="status"
+				th:value="${tickets.status}"></td>
+		</tr>
+	</table>
+	<button type="submit">Update Ticket</button>
+	</form>
+</body>
+</html>
+
+
+
+
+
